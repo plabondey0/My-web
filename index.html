@@ -35,15 +35,13 @@
         "@type": "Person",
         "name": "Plabon Dey",
         "url": "https://yourwebsite.com",
-        "image": "https://z-cdn-media.chatglm.cn/files/cb83a80a-cb0d-4086-8f11-4ea1651091fe.png?auth_key=1871998048-5c184c646dbf46148f59ccbceaac0059-0-f523a2ec4d9550ebabadb9700a8a5483",
+        "image": "https://z-cdn-media.chatglm.cn/files/cb83a80a-cb0d-4086-8f11-4ea1651091fe.png",
         "jobTitle": "Frontend Developer",
         "sameAs": [
             "https://www.facebook.com/plabon.arya",
             "https://www.instagram.com/plabon__dey/",
             "https://x.com/Plabon_Dey_",
-            "https://github.com/Plabon-D",
-            "https://www.reddit.com/user/Plabon__Dey/",
-            "https://www.threads.net/@plabon__dey"
+            "https://github.com/Plabon-D"
         ]
     }
     </script>
@@ -93,9 +91,7 @@
             color: #fff;
         }
 
-        .logo span {
-            color: #fff; /* Ensuring consistency, you can change this to accent color if desired */
-        }
+        .logo span { color: #fff; }
 
         .nav-links {
             display: flex;
@@ -113,9 +109,7 @@
             transition: color 0.3s ease;
         }
 
-        .nav-links li a:hover {
-            color: #ffffff;
-        }
+        .nav-links li a:hover { color: #ffffff; }
 
         /* Hero Section */
         .hero {
@@ -128,10 +122,7 @@
             z-index: 5;
         }
 
-        .hero-content {
-            max-width: 60%;
-            z-index: 2;
-        }
+        .hero-content { max-width: 60%; z-index: 2; }
 
         .hero-title {
             font-size: 5rem;
@@ -260,9 +251,7 @@
             width: 100%;
         }
 
-        .about-image-container {
-            position: relative;
-        }
+        .about-image-container { position: relative; }
 
         .about-image {
             width: 100%;
@@ -317,6 +306,129 @@
         .skill-card p {
             font-size: 0.9rem;
             color: #888;
+        }
+
+        /* --- Projects Section Styles (Updated for Single Centered Project) --- */
+        #projects {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-top: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            text-align: center; /* Centers the title */
+        }
+
+        .projects-container {
+            display: flex;
+            justify-content: center; /* Centers the card horizontally */
+            padding: 0 20px;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            max-width: 800px; /* Wider card for better showcase */
+            width: 100%;
+            text-align: left; /* Reset text align for inner content */
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(255, 0, 64, 0.15);
+            border-color: rgba(255, 0, 64, 0.3);
+        }
+
+        .project-image-wrapper {
+            position: relative;
+            width: 100%;
+            height: 400px; /* Taller for better view */
+            overflow: hidden;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .project-image {
+            transform: scale(1.05);
+        }
+
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(11,11,15,0.1), rgba(11,11,15,0.95));
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s ease;
+        }
+
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .project-btn {
+            padding: 12px 30px;
+            background: #fff;
+            color: #0b0b0f;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 6px;
+            font-size: 1rem;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover .project-btn {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .project-info {
+            padding: 30px;
+        }
+
+        .project-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .project-info p {
+            color: #aaa;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tech-tags span {
+            font-size: 0.8rem;
+            padding: 6px 14px;
+            border-radius: 20px;
+            background: rgba(255, 0, 64, 0.1);
+            color: #ff0040;
+            border: 1px solid rgba(255, 0, 64, 0.2);
         }
 
         /* Contact Section */
@@ -427,7 +539,6 @@
             box-shadow: 0 5px 15px rgba(255, 0, 64, 0.2);
         }
 
-        /* Ensure SVGs inherit color for fill */
         .social-links svg {
             width: 24px;
             height: 24px;
@@ -458,9 +569,7 @@
                 justify-content: center;
             }
             
-            .hero-content {
-                max-width: 100%;
-            }
+            .hero-content { max-width: 100%; }
 
             .hero-image-container {
                 width: 250px;
@@ -486,8 +595,8 @@
             .section { padding: 50px 20px; }
             .skills-grid { grid-template-columns: 1fr; }
             
-            .social-links {
-                flex-wrap: wrap;
+            .project-image-wrapper {
+                height: 250px;
             }
         }
     </style>
@@ -506,11 +615,11 @@
 
     <!-- Navigation -->
     <nav>
-        <!-- SEO Change: Changed div to anchor tag for better semantics -->
         <a href="#" class="logo">Plabon<span>Dey</span></a>
         <ul class="nav-links">
             <li><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -531,7 +640,6 @@
     <section id="about" class="section">
         <div class="about-container">
             <div class="about-image-container">
-                <!-- SEO Change: Added loading="lazy" for performance -->
                 <img src="https://z-cdn-media.chatglm.cn/files/cb83a80a-cb0d-4086-8f11-4ea1651091fe.png?auth_key=1871998048-5c184c646dbf46148f59ccbceaac0059-0-f523a2ec4d9550ebabadb9700a8a5483" alt="Plabon Dey Professional" class="about-image" loading="lazy">
             </div>
 
@@ -568,13 +676,40 @@
         </div>
     </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2 class="section-title">Client Project</h2>
+        
+        <div class="projects-container">
+            <article class="project-card">
+                <div class="project-image-wrapper">
+                    <!-- Replace src below with a screenshot of badhansen.info if desired -->
+                    <img src="https://image2url.com/r2/default/images/1773431330306-fa2e7fcf-9ac3-411f-89af-b9bc118f9c50.png" alt="Bad Hansen Portfolio Website" class="project-image">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="https://www.badhansen.info" target="_blank" class="project-btn">Visit Site</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Bad Hansen Portfolio</h3>
+                    <p>A professional portfolio website designed and developed for a client to showcase their personal brand and work. Features a clean interface, smooth animations, and fully responsive design.</p>
+                    <div class="tech-tags">
+                        <span>Web Design</span>
+                        <span>Frontend</span>
+                        <span>Responsive</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="section">
         <div class="contact-container">
             <h2 class="section-title">Get In Touch</h2>
             <p style="color: #888;">Have a project in mind? Let's work together.</p>
             
-            <!-- Formspree Form Integration -->
             <form class="contact-form" action="https://formspree.io/f/mykdlrnz" method="POST">
                 <div class="form-group">
                     <label>Your Name</label>
@@ -594,31 +729,24 @@
                 <button type="submit" class="submit-btn">Send Message</button>
             </form>
 
-            <!-- Social Links -->
             <div class="social-section-title">Or find me on</div>
             <div class="social-links">
-                <!-- Facebook -->
-                <a href="https://www.facebook.com/plabondey0" target="_blank" rel="noopener noreferrer" title="Facebook">
+                <a href="https://www.facebook.com/plabon.arya" target="_blank" rel="noopener noreferrer" title="Facebook">
                     <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
                 </a>
-                <!-- Instagram -->
-                <a href="https://www.instagram.com/plabondey0" target="_blank" rel="noopener noreferrer" title="Instagram">
+                <a href="https://www.instagram.com/plabon__dey/" target="_blank" rel="noopener noreferrer" title="Instagram">
                     <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                 </a>
-                <!-- Twitter X -->
-                <a href="https://x.com/plabondey0" target="_blank" rel="noopener noreferrer" title="Twitter">
+                <a href="https://x.com/Plabon_Dey_" target="_blank" rel="noopener noreferrer" title="Twitter">
                     <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                 </a>
-                <!-- Github -->
-                <a href="https://github.com/plabondey0" target="_blank" rel="noopener noreferrer" title="Github">
+                <a href="https://github.com/Plabon-D" target="_blank" rel="noopener noreferrer" title="Github">
                     <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                 </a>
-                <!-- Reddit -->
                 <a href="https://www.reddit.com/user/Plabon__Dey/" target="_blank" rel="noopener noreferrer" title="Reddit">
                     <svg viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm6.67-10a1.46 1.46 0 0 0-2.47-1 7.12 7.12 0 0 0-3.85-1.23L13 6.65l2.14.45a1 1 0 1 0 .13-.61L12.82 6a.31.31 0 0 0-.37.24l-.74 3.47a7.14 7.14 0 0 0-3.9 1.23 1.46 1.46 0 1 0-1.61 2.39 2.87 2.87 0 0 0 0 .44c0 2.24 2.61 4.06 5.83 4.06s5.83-1.82 5.83-4.06a2.87 2.87 0 0 0 0-.44 1.46 1.46 0 0 0 .81-1.33zm-10 1a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm5.61 2.47a3.53 3.53 0 0 1-2.28.73 3.53 3.53 0 0 1-2.28-.73.27.27 0 0 1 .38-.38 3 3 0 0 0 1.9.56 3 3 0 0 0 1.9-.56.27.27 0 0 1 .38.38zm-.18-1.47a1 1 0 1 1 1-1 1 1 0 0 1-1.01 1.01z"/></svg>
                 </a>
-                <!-- Threads -->
-                <a href="https://www.threads.net/@plabondey0" target="_blank" rel="noopener noreferrer" title="Threads">
+                <a href="https://www.threads.net/@plabon__dey" target="_blank" rel="noopener noreferrer" title="Threads">
                     <svg viewBox="0 0 24 24"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.5 12.068V12c.015-3.58 1.205-6.376 3.538-8.317C7.146 1.945 9.795 1.015 12.66 1c2.334.013 4.298.633 5.837 1.843 1.538 1.21 2.511 2.805 2.912 4.782.048.237-.108.468-.347.518-.237.048-.468-.108-.518-.347-.353-1.741-1.205-3.124-2.537-4.122-1.333-.998-3.078-1.541-5.133-1.554-2.582.013-4.965.86-6.886 2.445-2.011 1.66-3.051 4.13-3.067 7.345v.047c0 3.23.77 5.82 2.288 7.71 1.618 1.89 4.002 2.858 7.089 2.876h.006c2.007-.006 3.702-.47 5.04-1.381 1.338-.911 2.25-2.146 2.719-3.682.069-.231.311-.36.54-.29.231.069.36.31.29.54-.534 1.746-1.58 3.154-3.107 4.187-1.528 1.032-3.422 1.555-5.636 1.563l-.004-.003z"/></svg>
                 </a>
             </div>
